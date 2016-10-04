@@ -16,8 +16,8 @@ yum install subversion patch wget git kernel-headers gcc gcc-c++ cpp ncurses ncu
     make install 1> /dev/null && \
     ldconfig -v | grep pj && \
     cd /tmp && \
-    git clone -b certified/13.11 --depth 1 https://gerrit.asterisk.org/asterisk && \
-    cd /tmp/asterisk && \
+    git clone https://gerrit.asterisk.org/asterisk && \
+    cd /tmp/asterisk && git checkout tags/13.11.2 && \
     contrib/scripts/get_mp3_source.sh && \
     ./configure --with-srtp --with-crypto --with-ssl CFLAGS='-g -O2 -mtune=native' --libdir=/usr/lib64 && \
  make menuselect.makeopts && \
