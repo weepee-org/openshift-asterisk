@@ -4,6 +4,7 @@ MAINTAINER Joeri van Dooren <ure@moreorless.io>
 RUN yum update -y && \
 yum install -y epel-release && \
 
+# upgrade to 13.11
 yum install subversion patch wget git kernel-headers gcc gcc-c++ cpp ncurses ncurses-devel libxml2 libxml2-devel sqlite sqlite-devel openssl-devel newt-devel kernel-devel uuid-devel speex-devel gsm-devel libuuid-devel net-snmp-devel xinetd tar jansson-devel make bzip2 libsrtp libsrtp-devel gnutls-devel doxygen texinfo curl-devel net-snmp-devel neon-devel -y && \
     yum clean all && \
     cd /tmp && \
